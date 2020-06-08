@@ -1,0 +1,250 @@
+$tablet-width: 768px;
+$nav-bg-color: #1b1b1b;
+$nav-txt-color: #ffffff;
+
+@mixin small-screen {
+	@media (max-width: #{$tablet-width}) {
+		@content;
+	}
+}
+
+@mixin big-screen {
+	@media (min-width: #{$tablet-width}) {
+		@content;
+	}
+}
+
+// Navigation Bar
+nav {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	color: $nav-txt-color;
+	justify-content: flex-start;
+	background-color: $nav-bg-color;
+
+	@include small-screen {
+		text-align: center;
+		flex-direction: column;
+	}
+
+	// Link to Home page
+	a {
+		padding: 10px;
+		margin-left: 2em;
+		text-decoration: none;
+		color: $nav-txt-color;
+
+		@include small-screen {
+			margin: 0;
+			max-width: 100%;
+		}
+
+		// Home page icon
+		img {
+			height: 2.5rem;
+		}
+
+		img:hover {
+			@include big-screen {
+				transform: scale(1.1);
+				transition: transform 0.5s;
+			}
+		}
+	}
+
+	// Methods (CFOP, Roux) dropdown
+	section {
+
+		@include small-screen {
+			width: 100%;
+			margin: 0;
+		}
+
+		// Timer link
+		a {
+			@include small-screen {
+				width: 100%;
+			}
+		}
+
+		// How to solve button
+		label {
+			padding: 10px;
+			display: block;
+			margin-left: 2em;
+			background-color: $nav-bg-color;
+
+			@include small-screen {
+				margin: 0; 
+			}
+
+			// How to solve dropdown icon
+			.bx {
+				@include big-screen {
+					display: none;
+				}
+			}
+
+			i {
+				@include small-screen {
+					display: initial;
+					transform: rotate(0deg);
+					transition: transform 0.5s ease;
+				}
+			}
+		}
+
+		label:hover {
+			@include big-screen {
+				color: cyan;
+				transition: 0.3s;
+				cursor: pointer;
+				border-radius: 5px;
+				box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
+			}
+		}
+
+		label:hover + .methods {
+			@include big-screen {
+				display: block;
+			}
+		}
+
+		.methods:hover {
+			@include big-screen {
+				display: block;
+			}
+		}
+
+		#how-to-solve:checked + label > i {
+			@include small-screen {
+				transform: rotate(180deg);
+			}
+		}
+
+		#how-to-solve:checked ~ .methods {
+			@include small-screen {
+				transform: rotateX(0deg);
+			}
+		}
+
+		// Methods for solving
+		.methods {
+			display: none;
+			position: absolute;
+
+			@include small-screen {
+				width: 100%;
+				display: block;
+				transform-origin: top;
+				transform: rotateX(-90deg);
+				transition: transform 0.5s ease;
+			}
+			
+			// List with all methods
+			li {
+
+				// Label for each method
+				label {
+					width: 11.5em;
+					display: inline-block;
+
+					@include small-screen {
+						width: 100%;
+					}
+
+					// Icon for each method label
+					i {
+						display: none;
+
+						@include small-screen {
+							display: initial;
+						}
+					}
+				}
+
+				label:hover {
+					@include big-screen {
+						box-shadow: 0 0 5px #33ffff inset, 0 0 10px #66ffff inset;
+					}
+				}
+
+				label:hover + .steps {
+					@include big-screen {
+						display: inline-block;
+					}
+				}
+
+				#cfop:checked ~ .cfop-steps, 
+				#roux:checked ~ .roux-steps {
+					@include small-screen {
+						position: relative;
+						transform: rotateX(0deg);
+					}
+				}
+
+				.steps:hover {
+					@include big-screen {
+						display: inline-block;
+					}
+				}
+
+				// Steps for solving
+				.steps {
+					display: none;
+					position: absolute;
+
+					@include small-screen {
+						width: 100%;
+						display: block;
+						transform-origin: top;
+						transform: rotateX(-90deg);
+						transition: all 0.5s ease;
+					}
+
+					// List of all steps
+					li {
+						display: flex;
+
+						// Link for every step
+						a {
+							width: 10em;
+							margin-left: 0;
+							background-color: $nav-bg-color;
+
+							@include small-screen {
+								width: 100%;
+							}
+						}
+
+						a:hover {
+							@include big-screen {
+								box-shadow: 0 0 5px #33ffff inset, 0 0 10px #66ffff inset;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+a:not(.logo):hover {
+	@include big-screen {
+		cursor: pointer;
+		color: cyan;
+		border-radius: 5px;
+		transition: 0.3s;
+		box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
+	}
+}
+
+ul {
+	list-style-type: none;
+}
+
+input[type=checkbox] {
+	display: none;
+}

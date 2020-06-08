@@ -1,0 +1,53 @@
+$footer-bg-color: #1b1b1b;
+$footer-txt-color: #ffffff;
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Poppins;
+	box-sizing: border-box;
+}
+
+header {
+	display: block;
+	max-width: 40rem;
+	margin-top: 2rem;
+	text-align: center;
+	margin: 2rem auto 0;
+
+	p {
+		color: #777;
+		margin: 1rem;
+	}
+}
+
+article {
+	max-width: 800px;
+	text-align: center;
+	margin: 2rem auto 1rem;
+	border: 1px solid #bbb;
+
+	h3 {
+		background: linear-gradient(90deg,
+			rgba(221,76,20,1) 0%,
+			rgba(244,163,49,1) 25%,
+			rgba(244,210,49,1) 50%,
+			rgba(82,244,49,1) 75%,
+			rgba(106,167,251,1) 100%
+		);
+		padding: 1em;
+		border-bottom: 1px solid black;
+	}
+
+	p {
+		padding: 1rem;
+		text-align: justify;
+	}
+}
+
+footer {
+	padding: 1rem;
+	text-align: center;
+	color: $footer-txt-color;
+	background-color: $footer-bg-color;
+}
