@@ -1,0 +1,16 @@
+$footer-bg-color: #1b1b1b;
+$footer-txt-color: #ffffff;
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Poppins;
+	box-sizing: border-box;
+}
+
+footer {
+	padding: 1rem;
+	text-align: center;
+	color: $footer-txt-color;
+	background-color: $footer-bg-color;
+}
