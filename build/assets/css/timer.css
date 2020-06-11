@@ -1,0 +1,2 @@
+@media (max-width:768px){body{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}}#timer{display:block;text-align:center;font-size:7em;font-weight:700;padding:1em 0}.stats-section{display:flex;margin:0 auto;max-width:800px;justify-content:space-between;text-align:center}@media (max-width:768px){.stats-section{flex-direction:column}}.stats-section section{margin:0 1em;padding:1em}.stats-section section h4{margin:1em;font-size:1.5em;border-bottom:1px solid #111}.stats-section section p{margin:.5em 0}
+/*# sourceMappingURL=timer.css.map */

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Rubik's cube</title>
+
+	<link rel="stylesheet" href="./assets/css/styles.css">
+	<link rel="stylesheet" href="./assets/css/navbar.css">
+	<link rel="icon" type="image/png" href="./favicon.ico"/>
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+	<nav class="navigation-bar">
+
+		<!-- Main page -->
+		<a class="logo" href="./index.html">
+			<img alt="Rubik's cube icon to main page" src="./assets/images/rubik.png">
+		</a>
+
+		<!-- Timer page -->
+		<div>
+			<a href="./html/timer.html">
+				Timer
+			</a>
+		</div>
+
+		<div>
+			<!-- How to solve -->
+			<input type="checkbox" id="how-to-solve">
+			<label for="how-to-solve" class="how-to-solve">
+				How to solve 3x3 <i class='bx bxs-up-arrow'></i>
+			</label>
+			
+			<!-- Different methods -->
+			<ul class="methods">
+
+				<!-- CFOP method -->
+				<li>
+					<input type="checkbox" id="cfop">
+					<label for="cfop">
+						CFOP <i class='bx bx-plus'></i>
+					</label>
+
+					<!-- Different steps of the CFOP method -->
+					<ul class="steps cfop-steps">
+						<li>
+							<a href="./html/cfop/basic_info.html">Basic Info</a>
+						</li>
+						<li>
+							<a href="./html/cfop/cross.html">Cross</a>
+						</li>
+						<li>
+							<a href="./html/cfop/f2l.html">F2L</a>
+						</li>
+						<li>
+							<a href="./html/cfop/oll.html">OLL</a>
+						</li>
+						<li>
+							<a href="./html/cfop/pll.html">PLL</a>
+						</li>
+					</ul>
+				</li>
+
+				<!-- Roux method -->
+				<li>
+					<input type="checkbox" id="roux">
+					<label for="roux">
+						Roux <i class='bx bx-plus' ></i>
+					</label>
+					
+					<!-- Different steps of the Roux method -->
+					<ul class="steps roux-steps">
+						<li>
+							<a href="./html/roux/basic_info.html">Basic Info</a>
+						</li>
+						<li>
+							<a href="./html/roux/first_block.html">First Block</a>
+						</li>
+						<li>
+							<a href="./html/roux/second_block.html">Second Block</a>
+						</li>
+						<li>
+							<a href="./html/roux/cmll.html">CMLL</a>
+						</li>
+						<li>
+							<a href="./html/roux/lse.html">LSE</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+
+	</nav>
+
+	<header>
+		<h2>The Rubik's cube</h2>
+		<p>
+			A website dedicated to the speedsolving methods of the Rubik's cube. You should know how to solve one if you want this website to be useful for you.
+		</p>
+	</header>
+
+	<main>
+
+		<article>
+			<h3>Brief History</h3>
+			<p>
+				Rubik's Cube is a 3-D combination puzzle invented in 1974 by Hungarian sculptor and professor of architecture Ernő Rubik. Although the Rubik's Cube reached its height of mainstream popularity in the 1980s, it is still widely known and used. As of January 2009, 350 million cubes had been sold worldwide, making it the world's top-selling puzzle game. It is widely considered to be the world's best-selling toy.
+			</p>
+		</article>
+
+		<article>
+			<h3>About Me</h3>
+			<p>
+				My name is Ognian Baruh and currently I am in 11th grade in ELSYS. I learned how to solve the Rubik's cube about 7 years ago and I have been solving it ever since. I am using CFOP method, averaging at about 20 seconds with my personal best being 14.03 seconds.
+			</p>
+		</article>
+
+		<article>
+			<h3>Speedcubing</h3>
+			<p>
+				Speedcubing (also known as speedsolving) is a sport involving solving a variety of combination or twisty puzzles, the most famous being the 3x3x3 puzzle or Rubik's Cube, as quickly as possible. Since 2003, the World Cube Association, the Rubik's Cube's international governing body, has organised competitions worldwide and recognises world records. 
+			</p>
+		</article>
+
+		<article>
+			<h3>Official events</h3>
+			<p>
+				There are 17 official events a speedcuber can compete in: 2x2, 3x3, 4x4, 5x5, 6x6, 7x7, 3x3 Blindfolded, 3x3 Fewest Moves, 3x3 One-handed, Megaminx, Pyraminx, Rubik's Clock, Skewb, Square-1, 4x4 Blindfolded, 5x5 Blindfolded, 3x3 Multiple Blindfolded.
+			</p>
+		</article>
+
+		<article>
+			<h3>Timing</h3>
+			<p>
+				There are two separate ways of timing, so there are two records for every official event. The first one is 'Single', where the best solve of a speedcuber is taken. The second one is 'Average', where a speedcuber makes 5 solves, then the best and worst times are dropped out, and the mean of the remaining 3 is taken. 
+			</p>
+		</article>
+
+		<article>
+			<h3>World records</h3>
+			<p>
+				On every WCA competition, there are series of events, where a speedcuber can set a new world record. As of June 2020, the 3x3 Single world record is 3.47 by Yusheng Du and the 3x3 Average world record is 5.53 by Feliks Zemdegs.
+			</p>
+		</article>
+
+	</main>
+
+	<footer>
+		Copyright © Ognian Baruh 2020
+	</footer>
+
+</body>
+</html>
