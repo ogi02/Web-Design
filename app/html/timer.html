@@ -8,34 +8,34 @@
 
 	<title>Rubik's cube</title>
 
-	<link rel="stylesheet" href="../css/timer.css">
-	<link rel="stylesheet" href="../css/navbar.css">
-	<link rel="icon" type="image/png" href="../images/rubik.png"/>
+	<link rel="stylesheet" href="../assets/css/styles.css">
+	<link rel="stylesheet" href="../assets/css/navbar.css">
+	<link rel="stylesheet" href="../assets/css/timer.css">
+	<link rel="icon" type="image/png" href="../favicon.ico"/>
 	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 	<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-	<script type="text/javascript" src="../js/timer.js"></script>
+	<script type="module" src="../assets/js/app.min.js"></script>
 
 </head>
 
-<body>
+<body onload="prepareSolve()">
 
 	<nav class="navigation-bar">
 
 		<!-- Main page -->
 		<a class="logo" href="../index.html">
-			<img alt="Rubik's cube icon to main page" src="../images/rubik.png">
+			<img alt="Rubik's cube icon to main page" src="../assets/images/rubik.png">
 		</a>
 
 		<!-- Timer page -->
-		<section>
+		<div>
 			<a href="./timer.html">
 				Timer
 			</a>
-		</section>
+		</div>
 
-		<section>
-
+		<div>
 			<!-- How to solve -->
 			<input type="checkbox" id="how-to-solve">
 			<label for="how-to-solve" class="how-to-solve">
@@ -100,7 +100,7 @@
 				</li>
 			</ul>
 
-		</section>
+		</div>
 
 	</nav>
 
@@ -109,7 +109,37 @@
 	</header>
 
 	<main>
-		<span id="timer">0.00</span> s
+		<article>
+			<h3>
+				How to use the timer?
+			</h3>
+			<p>
+				This timer tries to simulate the real timer, used in competitions to measure time of solves. On a computer, hold the space bar until the timer becomes green (0.5 seconds) and then release to start the timer. When you finish the solve, just press the space bar to stop the timer. On a phone, do the same but with touching on the timer.
+			</p>
+			<p>
+				<strong>Note that times aren't saved after leaving the page!</strong>
+			</p>
+		</article>
+
+		<article>
+			<h3 id="scramble"></h3>
+			<p id="timer">0</p>
+		</article>
+
+		<section class="stats-section">
+
+			<section>
+				<h4>Stats</h4>
+				<p id="best">Best of 0: 0</p>
+				<p id="average">Average of 0: 0</p>
+			</section>
+
+			<section id="times">
+				<h4>Times</h4>
+			</section>
+
+		</section>
+
 	</main>
 
 	<footer>
