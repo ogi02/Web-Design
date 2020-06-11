@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Project for the school subject Web Design in 11 grade in ELSYS.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ogi02/Rubiks-cube.git"
@@ -16,9 +13,28 @@
     "url": "https://github.com/ogi02/Rubiks-cube/issues"
   },
   "homepage": "https://github.com/ogi02/Rubiks-cube#readme",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "autoprefixer": "^9.8.0",
+    "babelify": "^10.0.0",
     "browser-sync": "^2.26.7",
+    "browserify": "^16.5.1",
+    "cssnano": "^4.1.10",
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.1.0"
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   }
 }
