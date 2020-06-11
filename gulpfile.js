@@ -20,32 +20,32 @@ const
 // Paths to source and build files
 const paths = {
 	base: {
-		src: './app'
+		src: './src',
 		dest: './build'
-	}
+	},
 	html: {
-		src: './app/**/*.html',
+		src: './src/**/*.html',
 		dest: './build'
 	},
 	styles: {
-		src: './app/scss/**/*.scss',
+		src: './src/scss/**/*.scss',
 		dest: './build/assets/css'
 	},
 	scripts: {
-		src: './app/js/**/*.js',
+		src: './src/js/**/*.js',
 		dest: './build/assets/js'
 	},
 	images: {
-		src: './app/images/**/*',
+		src: './src/images/**/*',
 		dest: './build/assets/images'
 	},
 	favicon: {
-		src: './app/favicon.ico',
+		src: './src/favicon.ico',
 		dest: './build'
 	}
 };
 
-const jsFiles = ['./app/js/timer.js', './app/js/times.js']
+const jsFiles = ['./src/js/timer.js', './src/js/times.js']
 
 // Remove everything from ./build folder
 const clean = () => del(['./build']);
