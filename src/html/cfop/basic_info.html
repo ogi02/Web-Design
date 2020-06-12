@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Rubik's cube</title>
+
+	<link rel="stylesheet" href="../../assets/css/styles.css">
+	<link rel="stylesheet" href="../../assets/css/navbar.css">
+	<link rel="stylesheet" href="../../assets/css/methods.css">
+	<link rel="icon" type="image/png" href="../../favicon.ico"/>
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+	<nav class="navigation-bar">
+
+		<!-- Main page -->
+		<a class="logo" href="../../index.html">
+			<img alt="Rubik's cube icon to main page" src="../../assets/images/rubik.png">
+		</a>
+
+		<!-- Timer page -->
+		<div>
+			<a href="../timer.html">
+				Timer
+			</a>
+		</div>
+
+		<div>
+			<!-- How to solve -->
+			<input type="checkbox" id="how-to-solve">
+			<label for="how-to-solve" class="how-to-solve">
+				How to solve 3x3 <i class='bx bxs-up-arrow'></i>
+			</label>
+			
+			<!-- Different methods -->
+			<ul class="methods">
+
+				<!-- CFOP method -->
+				<li>
+					<input type="checkbox" id="cfop">
+					<label for="cfop">
+						CFOP <i class='bx bx-plus'></i>
+					</label>
+
+					<!-- Different steps of the CFOP method -->
+					<ul class="steps cfop-steps">
+						<li>
+							<a href="./basic_info.html">Basic Info</a>
+						</li>
+						<li>
+							<a href="./cross.html">Cross</a>
+						</li>
+						<li>
+							<a href="./f2l.html">F2L</a>
+						</li>
+						<li>
+							<a href="./oll.html">OLL</a>
+						</li>
+						<li>
+							<a href="./pll.html">PLL</a>
+						</li>
+					</ul>
+				</li>
+
+				<!-- Roux method -->
+				<li>
+					<input type="checkbox" id="roux">
+					<label for="roux">
+						Roux <i class='bx bx-plus'></i>
+					</label>
+					
+					<!-- Different steps of the Roux method -->
+					<ul class="steps roux-steps">
+						<li>
+							<a href="../roux/basic_info.html">Basic Info</a>
+						</li>
+						<li>
+							<a href="../roux/first_block.html">First Block</a>
+						</li>
+						<li>
+							<a href="../roux/second_block.html">Second Block</a>
+						</li>
+						<li>
+							<a href="../roux/cmll.html">CMLL</a>
+						</li>
+						<li>
+							<a href="../roux/lse.html">LSE</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+
+	</nav>
+
+	<header>
+		<h2>CFOP</h2>
+
+		<p>
+			The CFOP method, sometimes known as the Fridrich method, is one of the most commonly used methods in speedsolving a 3×3×3 Rubik's Cube.
+		</p>
+		<p>
+			Inventor: Jessica Fridrich
+		</p>
+		<p>
+			Years of development: 1980s
+		</p>
+		<p>
+			Steps: Cross -> F2L -> OLL -> PLL
+		</p>
+		<p>
+			Number of algorithms: 78 to 119
+		</p>
+		<p>
+			Average number of moves in a solve: ~55
+		</p>
+
+	</header>
+
+	<main>
+		
+		<article class="steps-article">
+
+			<h3>Steps</h3>
+
+			<div class="steps-section">
+
+				<section>
+					<h4><a class="links" href="./cross.html">Cross</a></h4>
+					<p>
+						This first stage involves solving the four edge pieces in one outer layer of the puzzle, centering around a commonly coloured centre piece. Many speedcubers usually solve the cross on the bottom side to avoid cube rotations, which slow down solve times.
+					</p>
+				</section>
+
+				<section>
+					<h4><a class="links" href="./f2l.html">F2L</a></h4>
+					<p>
+						In First Two Layers (F2L), corner and edge pieces are paired up and later moved to their correct location. There are 42 standard cases for each corner-edge pair including the case where it is already solved. It can also be done intuitively.
+					</p>
+				</section>
+
+				<section>
+					<h4><a class="links" href="./oll.html">OLL</a></h4>
+					<p>
+						This stage involves manipulating the top layer so that all the pieces therein have the same colour on top, at the expense of incorrect colours on other sides. This stage involves a total of 57 algorithms. A simpler version, called "two-look OLL" orients edges first and corners afterwards. Algorithms are usually performed two to three times for this version. It uses ten algorithms, three for edge orientation and seven for corner orientation.
+					</p>
+				</section>
+
+				<section>
+					<h4><a class="links" href="./pll.html">PLL</a></h4>
+					<p>
+						The final stage involves moving the pieces of the top layer while preserving their orientation. There is a total of 21 algorithms for this stage. They are distinguished by letter names, usually based on what they look like with arrows representing what pieces are swapped around (e.g., A permutation, F permutation, T permutation, etc.). "Two-look" PLL solves the corners first and edges separately. It uses six algorithms, two for corner permutation and up to four for edge permutation. Also, a U-perm can be repeated if the user wishes to use even fewer algorithms at the expense of usually faster solve times.
+					</p>
+				</section>
+
+			</div>
+
+		</article>
+
+	</main>
+
+	<footer>
+		Copyright © Ognian Baruh 2020
+	</footer>
+
+</body>
+</html>
