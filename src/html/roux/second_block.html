@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Rubik's cube</title>
+
+	<link rel="stylesheet" href="../../assets/css/styles.css">
+	<link rel="stylesheet" href="../../assets/css/navbar.css">
+	<link rel="stylesheet" href="../../assets/css/steps.css">
+	<link rel="icon" type="image/png" href="../../favicon.ico"/>
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+	<nav class="navigation-bar">
+
+		<!-- Main page -->
+		<a class="logo" href="../../index.html">
+			<img alt="Rubik's cube icon to main page" src="../../assets/images/rubik.png">
+		</a>
+
+		<!-- Timer page -->
+		<div>
+			<a href="../timer.html">
+				Timer
+			</a>
+		</div>
+
+		<div>
+			<!-- How to solve -->
+			<input type="checkbox" id="how-to-solve">
+			<label for="how-to-solve" class="how-to-solve">
+				How to solve 3x3 <i class='bx bxs-up-arrow'></i>
+			</label>
+			
+			<!-- Different methods -->
+			<ul class="methods">
+
+				<!-- CFOP method -->
+				<li>
+					<input type="checkbox" id="cfop">
+					<label for="cfop">
+						CFOP <i class='bx bx-plus'></i>
+					</label>
+
+					<!-- Different steps of the CFOP method -->
+					<ul class="steps cfop-steps">
+						<li>
+							<a href="../cfop/basic_info.html">Basic Info</a>
+						</li>
+						<li>
+							<a href="../cfop/cross.html">Cross</a>
+						</li>
+						<li>
+							<a href="../cfop/f2l.html">F2L</a>
+						</li>
+						<li>
+							<a href="../cfop/oll.html">OLL</a>
+						</li>
+						<li>
+							<a href="../cfop/pll.html">PLL</a>
+						</li>
+					</ul>
+				</li>
+
+				<!-- Roux method -->
+				<li>
+					<input type="checkbox" id="roux">
+					<label for="roux">
+						Roux <i class='bx bx-plus'></i>
+					</label>
+					
+					<!-- Different steps of the Roux method -->
+					<ul class="steps roux-steps">
+						<li>
+							<a href="./basic_info.html">Basic Info</a>
+						</li>
+						<li>
+							<a href="./first_block.html">First Block</a>
+						</li>
+						<li>
+							<a href="./second_block.html">Second Block</a>
+						</li>
+						<li>
+							<a href="./cmll.html">CMLL</a>
+						</li>
+						<li>
+							<a href="./lse.html">LSE</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+
+	</nav>
+
+	<header>
+		<h2>Second Block</h2>
+	</header>
+
+	<main>
+		<img alt="first-block-image" src="../../assets/images/roux/second_block.png">
+		<p>
+			Create the corresponding 3x2x1 block, opposite the first, on the Right slice (Blue centre, Blue/White, Blue/Red, Blue/Orange edges, Blue/White/Orange and Blue/White/Red corners). This should be done without disturbing the block built in step 1, using only R, r, M and U moves. (Diagram looking at the R-face)
+		</p>
+	</main>
+
+	<footer>
+		Copyright © Ognian Baruh 2020
+	</footer>
+
+</body>
+</html>
