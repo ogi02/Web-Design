@@ -1,0 +1,36 @@
+main {
+	margin: 1em 0;
+	text-align: center;
+
+	p {
+		display: block;
+		margin: 0 auto;
+		max-width: 40em;
+		color: #333;
+		padding: 1em;
+		text-align: justify;
+	}
+}
+
+.cases {
+
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+	.case {
+		display: flex;
+		width: 20em;
+		align-items: center;
+		margin: 1em;
+
+		img {
+			width: 5em;
+			margin-left: 1em;
+		}
+
+		p {
+			width: 15em;
+		}
+	}
+}
