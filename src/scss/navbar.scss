@@ -28,9 +28,10 @@ nav {
 		flex-direction: column;
 	}
 
-	// Link to Home page
+	// Link to Home and Preview page
 	a {
-		padding: 10px;
+		padding: 5px;
+		display: block;
 		margin-left: 2em;
 		text-decoration: none;
 		color: $nav-txt-color;
