@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Rubik's cube</title>
+
+	<link rel="stylesheet" href="../../assets/css/styles.css">
+	<link rel="stylesheet" href="../../assets/css/navbar.css">
+	<link rel="stylesheet" href="../../assets/css/steps.css">
+	<link rel="icon" type="image/png" href="../../favicon.ico"/>
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+	<script type="module" src="../../assets/js/pll_algorithms.js"></script>
+
+</head>
+
+<body>
+
+	<nav class="navigation-bar">
+
+		<!-- Main page -->
+		<a class="logo" href="../../index.html">
+			<img alt="Rubik's cube icon to main page" src="../../assets/images/rubik.png">
+		</a>
+
+		<!-- Timer page -->
+		<div>
+			<a href="../timer.html">
+				Timer
+			</a>
+		</div>
+
+		<div>
+			<!-- How to solve -->
+			<input type="checkbox" id="how-to-solve">
+			<label for="how-to-solve" class="how-to-solve">
+				How to solve 3x3 <i class='bx bxs-up-arrow'></i>
+			</label>
+			
+			<!-- Different methods -->
+			<ul class="methods">
+
+				<!-- CFOP method -->
+				<li>
+					<input type="checkbox" id="cfop">
+					<label for="cfop">
+						CFOP <i class='bx bx-plus'></i>
+					</label>
+
+					<!-- Different steps of the CFOP method -->
+					<ul class="steps cfop-steps">
+						<li>
+							<a href="./basic_info.html">Basic Info</a>
+						</li>
+						<li>
+							<a href="./cross.html">Cross</a>
+						</li>
+						<li>
+							<a href="./f2l.html">F2L</a>
+						</li>
+						<li>
+							<a href="./oll.html">OLL</a>
+						</li>
+						<li>
+							<a href="./pll.html">PLL</a>
+						</li>
+					</ul>
+				</li>
+
+				<!-- Roux method -->
+				<li>
+					<input type="checkbox" id="roux">
+					<label for="roux">
+						Roux <i class='bx bx-plus'></i>
+					</label>
+					
+					<!-- Different steps of the Roux method -->
+					<ul class="steps roux-steps">
+						<li>
+							<a href="../roux/basic_info.html">Basic Info</a>
+						</li>
+						<li>
+							<a href="../roux/first_block.html">First Block</a>
+						</li>
+						<li>
+							<a href="../roux/second_block.html">Second Block</a>
+						</li>
+						<li>
+							<a href="../roux/cmll.html">CMLL</a>
+						</li>
+						<li>
+							<a href="../roux/lse.html">LSE</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+
+	</nav>
+
+	<header>
+		<h2>PLL</h2>
+		<p>
+			Permutation of Last Layer (PLL) is the last step of the CFOP, and is the final straight in speedsolving the Rubik's cube. There are 21 different variations of PLL, and a well-known name for each. Therefore are required 21 algorithms to make a PLL solving in just 1 fast algorithm.
+		</p>
+	</header>
+
+	<main>
+		<article>
+			<h3>PLL Cases</h3>
+			
+			<div id="cases" class="cases">
+
+			</div>
+
+		</article>
+	</main>
+
+	<footer>
+		Copyright © Ognian Baruh 2020
+	</footer>
+
+</body>
+</html>
