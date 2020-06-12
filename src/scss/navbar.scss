@@ -30,7 +30,7 @@ nav {
 
 	// Link to Home and Preview page
 	a {
-		padding: 5px;
+		padding: 10px;
 		display: block;
 		margin-left: 2em;
 		text-decoration: none;
@@ -38,6 +38,7 @@ nav {
 
 		@include small-screen {
 			margin: 0;
+			padding: 5px;
 			max-width: 100%;
 		}
 
