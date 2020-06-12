@@ -16,6 +16,8 @@ const
 	buffer = require('vinyl-buffer') // Convert streaming vinyl files to use buffers
 	source = require('vinyl-source-stream') // Use conventional text streams at the start of your gulp or vinyl pipelines
 	uglify = require('gulp-uglify') // Uglify is a simple tool to uglify javascript & css files
+	tap = require('gulp-tap'); // Easily tap into a pipeline.
+
 
 // Paths to source and build files
 const paths = {
@@ -45,7 +47,7 @@ const paths = {
 	}
 };
 
-const jsFiles = ['./src/js/timer.js', './src/js/times.js']
+const jsFiles = ['./src/js/timer.js', './src/js/times.js', './src/js/algorithms.js']
 
 // Remove everything from ./build folder
 const clean = () => del(['./build']);
@@ -80,19 +82,19 @@ const styles = () =>
 
 // Minify all javascript files and concat them into a single app.min.js
 const scripts = () => {
-	return browserify({
-		entries: jsFiles
-	})
-	.transform(babelify.configure({
-		presets: ['@babel/preset-env']
-	}))
-	.bundle()
-	.pipe(source('app.min.js'))
-	.pipe(buffer())
-	.pipe(sourcemaps.init())
-	.pipe(uglify())
-	.pipe(sourcemaps.write('.'))
-	.pipe(gulp.dest(paths.scripts.dest));
+	return gulp.src(paths.scripts.src, { read: false })
+		.pipe(tap((file) => {
+			file.contents = browserify(file.path, {
+				debug: true
+			}).transform(babelify.configure({
+				presets: ['@babel/preset-env']
+			})).bundle();
+		}))
+		.pipe(buffer())
+		.pipe(sourcemaps.init({ loadMaps: true }))
+		.pipe(uglify())
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest(paths.scripts.dest));
 }
 
 // Copy and minify images
