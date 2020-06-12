@@ -21,10 +21,13 @@ How to solve section includes step-by-step tutorial on the two most used speedso
 
 ### Screenshots
 
+Main Page
 ![Main Page](./screenshots/main-page.png)
 
+Timer
 ![Timer](./screenshots/timer.png)
 
+PLL algorithm set
 ![PLL](./screenshots/pll.png)
 
 ### Technologies
